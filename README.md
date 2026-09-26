@@ -50,8 +50,10 @@
     border-bottom:1px solid rgba(36,21,9,0.1);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;}
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Anton',sans-serif;font-size:1.05rem;letter-spacing:0.02em;}
+  .brand{display:flex;align-items:baseline;gap:10px;font-family:'Anton',sans-serif;font-size:1.05rem;letter-spacing:0.02em;}
+  .brand-mark{display:flex;align-items:center;gap:10px;}
   .brand img{height:34px;width:auto;}
+  .brand-tag{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:0.82rem;color:var(--caramel);letter-spacing:0;}
   .nav a.cta{
     font-family:'Fraunces',serif;font-weight:600;font-size:0.92rem;
     background:var(--ink);color:var(--cream);padding:10px 18px;border-radius:999px;
@@ -73,18 +75,19 @@
   .btn-ghost{border-color:rgba(243,232,211,0.5);color:var(--cream);}
   .est{margin-top:52px;font-size:0.9rem;color:rgba(233,215,179,0.6);}
 
-  /* ABOUT */
+  /* MEET THE CREATOR */
   .about{padding:88px 0;}
-  .about .grid{display:grid;grid-template-columns:1.3fr 0.9fr;gap:64px;align-items:center;}
+  .about .grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;}
   .about h2{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:22px;}
   .about p{font-size:1.08rem;max-width:52ch;}
   .about p + p{margin-top:16px;}
-  .mark{
-    width:220px;height:220px;border-radius:50%;background:var(--espresso);
-    display:flex;align-items:center;justify-content:center;margin:0 auto;
-    transform:rotate(-4deg);
+  .about .role{color:var(--caramel);font-style:italic;margin-bottom:6px;font-size:1.05rem;}
+  .portrait{
+    border-radius:14px;overflow:hidden;transform:rotate(-2deg);
+    box-shadow:0 18px 40px rgba(24,13,6,0.25);
+    border:6px solid var(--espresso);
   }
-  .mark svg{width:70%;}
+  .portrait img{width:100%;height:auto;display:block;}
 
   /* SERVICES */
   .services{background:var(--parchment);padding:88px 0;}
@@ -99,6 +102,15 @@
   .service-row h3{font-size:1.4rem;margin-bottom:6px;}
   .service-row p{max-width:52ch;}
 
+  .services .layout{display:grid;grid-template-columns:1.3fr 0.9fr;gap:56px;align-items:start;}
+  .work-example{position:sticky;top:96px;}
+  .work-example .frame{
+    border-radius:14px;overflow:hidden;border:6px solid var(--espresso);
+    box-shadow:0 18px 40px rgba(24,13,6,0.2);transform:rotate(2deg);
+  }
+  .work-example video{width:100%;display:block;background:#000;}
+  .work-example .caption{margin-top:16px;font-style:italic;color:var(--ink);opacity:0.75;font-size:0.95rem;text-align:center;}
+
   /* CONTACT */
   .contact{background:var(--espresso-deep);color:var(--cream);padding:100px 0;text-align:center;}
   .contact h2{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--cream);}
@@ -110,8 +122,13 @@
 
   @media(max-width:760px){
     .about .grid{grid-template-columns:1fr;}
-    .mark{order:-1;width:160px;height:160px;}
+    .portrait{max-width:280px;margin:0 auto;}
     .nav a.cta{font-size:0.85rem;padding:9px 14px;}
+    .services .layout{grid-template-columns:1fr;}
+    .work-example{position:static;margin-top:40px;}
+  }
+  @media(max-width:480px){
+    .brand{flex-direction:column;align-items:flex-start;gap:2px;}
   }
 </style>
 </head>
@@ -119,7 +136,10 @@
 
 <header>
   <div class="nav wrap">
-    <div class="brand"><img src="assets/logo.png" alt="Cielo Studios"> Cielo Studios</div>
+    <div class="brand">
+      <span class="brand-mark"><img src="assets/logo.png" alt="Cielo Studios"> Cielo Studios</span>
+      <span class="brand-tag">social media management</span>
+    </div>
     <a class="cta" href="https://wa.me/12133093160" target="_blank" rel="noopener">Say hello</a>
   </div>
 </header>
@@ -141,17 +161,14 @@
 
 <section class="about">
   <div class="wrap grid">
-    <div>
-      <h2>Let's be better humans</h2>
-      <p>That's less a slogan than a rule we hold ourselves to. We show up on time, we tell your story honestly, and we treat every client's community like our own.</p>
-      <p>Good content isn't about chasing trends — it's about paying attention to what your people actually respond to, and doing that, consistently, week after week.</p>
+    <div class="portrait">
+      <img src="assets/abraham.jpg" alt="Abraham Heavener, founder of Cielo Studios">
     </div>
-    <div class="mark">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#f3e8d3" stroke-width="2"/>
-        <line x1="50" y1="30" x2="50" y2="70" stroke="#f3e8d3" stroke-width="4" stroke-linecap="round"/>
-        <line x1="34" y1="46" x2="66" y2="46" stroke="#f3e8d3" stroke-width="4" stroke-linecap="round"/>
-      </svg>
+    <div>
+      <div class="role">Meet the creator</div>
+      <h2>Abraham Heavener</h2>
+      <p>I'm 19, and I've spent nearly my whole life in Belize. I've always been drawn to building things — solving a problem, putting a plan into motion, or making a film.</p>
+      <p>I started Cielo Studios to carry on my father's work in filmmaking, and I hold every project we take on to that same standard: we put everything we have into it, and then some.</p>
     </div>
   </div>
 </section>
@@ -161,17 +178,27 @@
     <h2>What we do</h2>
     <p>One focus, done properly: content that's planned, shot, and posted so your account actually moves.</p>
 
-    <div class="service-row">
-      <div class="num">01</div>
-      <div><h3>Content strategy</h3><p>We figure out what to post and why — a plan built around your brand, your audience, and what's actually working right now.</p></div>
-    </div>
-    <div class="service-row">
-      <div class="num">02</div>
-      <div><h3>Filming &amp; production</h3><p>Reels, photos, and short-form video, shot and edited to look like you — not like a template.</p></div>
-    </div>
-    <div class="service-row">
-      <div class="num">03</div>
-      <div><h3>Posting &amp; growth</h3><p>We publish on schedule and track what's landing, so the account keeps building instead of stalling out.</p></div>
+    <div class="layout">
+      <div>
+        <div class="service-row">
+          <div class="num">01</div>
+          <div><h3>Content strategy</h3><p>We figure out what to post and why — a plan built around your brand, your audience, and what's actually working right now.</p></div>
+        </div>
+        <div class="service-row">
+          <div class="num">02</div>
+          <div><h3>Filming &amp; production</h3><p>Reels, photos, and short-form video, shot and edited to look like you — not like a template.</p></div>
+        </div>
+        <div class="service-row">
+          <div class="num">03</div>
+          <div><h3>Posting &amp; growth</h3><p>We publish on schedule and track what's landing, so the account keeps building instead of stalling out.</p></div>
+        </div>
+      </div>
+      <div class="work-example">
+        <div class="frame">
+          <video src="assets/work-example.mp4" controls playsinline preload="metadata"></video>
+        </div>
+        <div class="caption">A recent piece from Cielo Studios</div>
+      </div>
     </div>
   </div>
 </section>
@@ -191,3 +218,6 @@
 
 </body>
 </html>
+
+
+ 
