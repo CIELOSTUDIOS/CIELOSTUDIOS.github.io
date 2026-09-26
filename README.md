@@ -1,9 +1,7 @@
-<img width="3456" height="4608" alt="IMG_4973" src="https://github.com/user-attachments/assets/8f66592f-3237-414a-8118-f2d07fb66e08" />
 
-
-<img width="1489" height="1056" alt="de7898f6-64b9-4241-b357-916368eec1bd" src="https://github.com/user-attachments/assets/108019d3-237e-479f-9d43-bab75cc5802b" />
   # CIELOSTUDIOS.github.io
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -120,7 +118,8 @@
   .contact h2{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--cream);}
   .contact p{max-width:44ch;margin:22px auto 0;color:var(--parchment);font-size:1.1rem;}
   .contact .actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:36px;}
-  .contact .insta{display:block;margin-top:28px;color:var(--gold);text-decoration:none;font-style:italic;}
+  .contact .socials{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:28px;}
+  .contact .socials a{color:var(--gold);text-decoration:none;font-style:italic;}
 
   footer{padding:32px 0;text-align:center;font-size:0.9rem;color:rgba(36,21,9,0.6);}
 
@@ -214,14 +213,22 @@
     <div class="actions">
       <a class="btn btn-primary" href="https://wa.me/12133093160" target="_blank" rel="noopener">Message us on WhatsApp</a>
     </div>
-    <a class="insta" href="https://instagram.com/cielostudiosbz" target="_blank" rel="noopener">@cielostudiosbz</a>
+    <div class="socials">
+      <a href="https://instagram.com/cielostudiosbz" target="_blank" rel="noopener">@cielostudiosbz on Instagram</a>
+      <a href="https://tiktok.com/@cielostudiosbz" target="_blank" rel="noopener">@cielostudiosbz on TikTok</a>
+    </div>
   </div>
 </section>
 
 <footer>Cielo Studios © 2026 — Let's be better humans.</footer>
 
 </body>
-</html>
+</html><img width="675" height="900" alt="abraham" src="https://github.com/user-attachments/assets/578e13ae-9871-48ba-a628-a78758a03e74" />
+
+
+https://github.com/user-attachments/assets/49d55247-bdd9-4af1-b970-17a8b562c3b4
+
+<img width="500" height="355" alt="logo" src="https://github.com/user-attachments/assets/dd0c1f06-6516-48b7-8b31-33e3f877e1f7" />
 
 
  
